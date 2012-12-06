@@ -3,17 +3,23 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
-	<!-- Esta etiqueta nos indica donde están nuestros archivos de configuración para la aplicación.  -->
+	<!-- Esta etiqueta nos indica donde están nuestros archivos de configuración 
+		para la aplicación. -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/spring/root-context.xml</param-value>
+		<param-value>
+			/WEB-INF/spring/root-context.xml
+			/WEB-INF/spring/security.xml
+		</param-value>
 	</context-param>
-	
-	<!-- Aquí se declara un listener que es el que cargara el contexto de la aplicación. -->
+
+	<!-- Aquí se declara un listener que es el que cargara el contexto de la 
+		aplicación. -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-	<!-- En esta etiqueta se declara el controlador y se le indica que será el primer o en ser cargado al inicializar la aplicación. -->
+	<!-- En esta etiqueta se declara el controlador y se le indica que será 
+		el primer o en ser cargado al inicializar la aplicación. -->
 	<!-- Processes application requests -->
 	<servlet>
 		<servlet-name>appServlet</servlet-name>
@@ -24,10 +30,19 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-	<!-- se indica que clase de peticiones va a aceptar, en este caso le estamos diciendo que acepte cualquier petición que le entre. -->	
+	<!-- se indica que clase de peticiones va a aceptar, en este caso le estamos 
+		diciendo que acepte cualquier petición que le entre. -->
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-
+	<!--Filtros de seguridad para acceso a las páginas -->
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 </web-app>

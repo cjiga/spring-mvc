@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /** @Controller:  Esto indica que es un controlador y cuando la aplicación escanee el paquete lo encontrara.*/
 @Controller
-public class HomeController {
+public class LoginController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -27,7 +27,7 @@ public class HomeController {
 	/**@RequestMapping: esta anotación captura la petición que es igual al valor de value y se realiza por el método Get, 
 	 * 	al ser la petición raíz se está indicando que esta será la página de inicio de la aplicación. */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
+	public String login(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
@@ -37,7 +37,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "login";
 	}
 	
 }
