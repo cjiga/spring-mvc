@@ -42,4 +42,11 @@ public class LoginController {
 
 	}
 	
+	@RequestMapping(value = "/",method = RequestMethod.POST)
+	public String onSubmit(){		
+		//boolean login = authenService.findUserByCredentials(user, password);
+		return "home1";
+	} 
+
+	
 }
