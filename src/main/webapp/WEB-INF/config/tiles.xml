@@ -7,14 +7,14 @@
 	<!-- We declare a new template named template-main. This template is used 
 		for displaying the main page. It has 4 attributes. These attributes are placeholder 
 		for our contents For each attribute, we have assigned a corresponding JSP -->
-	<definition name="template-main" template="/WEB-INF/views/home.jsp">
+	<definition name="raiz" template="/WEB-INF/views/template.jsp">
 		<put-attribute name="head" value="/WEB-INF/views/head.jsp" />
 		<put-attribute name="menu" value="/WEB-INF/views/menu.jsp" />
 		<put-attribute name="content" value="" />
 		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp" />
 	</definition>
 
-	<definition name="home1" extends="template-main">
+	<definition name="home1" extends="raiz">
 		<put-attribute name="content" value="" />
 	</definition> 
 	<!-- We declare a new template named template-detail. This template is used 

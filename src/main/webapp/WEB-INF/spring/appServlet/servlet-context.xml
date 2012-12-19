@@ -33,7 +33,7 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-
+	
 	<!-- Esta etiqueta le dice a la aplicación que busque en al paquete upv.pfc.pd 
 		los controladores para las páginas, esto nos ahorra tener que declararlos 
 		cada vez y poder definir los controladores más fácilmente mediante anotaciones. -->
