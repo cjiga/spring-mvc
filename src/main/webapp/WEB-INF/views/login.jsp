@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<%@ include file="/WEB-INF/views/include/titulo.jsp" %> 
    <link href="${pageContext.request.contextPath}/resources/css/bootstrap/bootstrap.css" rel="stylesheet" media="screen">
     <link href="${pageContext.request.contextPath}/resources/css/bootstrap/bootstrap-responsive.css" rel="stylesheet">    
 	<script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>

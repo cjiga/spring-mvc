@@ -48,6 +48,15 @@
 			</beans:list>
 		</beans:property>
 	</beans:bean>
+	
+	<!-- Configurar el archivo tile-defs.xml -->
+	<beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<beans:property name="basenames">
+			<beans:list>
+				<beans:value>MessageResource</beans:value>
+			</beans:list>
+		</beans:property>
+	</beans:bean>
 
 
 </beans:beans>

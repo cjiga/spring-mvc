@@ -1,9 +1,8 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+<%@ include file="/WEB-INF/views/include/tagLib.jsp" %> 
 
 <html>
 <head>
-<title>Portal Docente Spring</title>
+<%@ include file="/WEB-INF/views/include/titulo.jsp" %> 
 <!-- Bootstrap -->
 <link
 	href="${pageContext.request.contextPath}/resources/css/bootstrap/bootstrap.min.css"
